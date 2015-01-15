@@ -1,4 +1,4 @@
-zsh-add-upstream [![Build Status](https://travis-ci.org/caarlos0/zsh-open-pr.svg?branch=master)](https://travis-ci.org/caarlos0/zsh-open-pr)
+zsh-add-upstream [![Build Status](https://travis-ci.org/caarlos0/zsh-add-upstream.svg?branch=master)](https://travis-ci.org/caarlos0/zsh-open-pr)
 ==================
 
 ZSH plugin to easily add the upstream remote to you git fork.
