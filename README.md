@@ -24,16 +24,22 @@ upstream  git@github.com:random/random.git (push)
 
 ## Installation
 
-Using antigen:
+### Using antibody:
 
 ```sh
-antigen bundle caarlos0/zsh-add-upstream
+$ antibody bundle caarlos0/zsh-add-upstream
+```
+
+### Using antigen:
+
+```sh
+$ antigen bundle caarlos0/zsh-add-upstream
 ```
 
 ## As a git alias
 
 ```sh
 $ git config --global alias.add-upstream '!zsh -ic add-upstream'
-$ git pr
+$ git add-upstream organization
 ```
 
