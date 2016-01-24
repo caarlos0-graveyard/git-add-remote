@@ -4,6 +4,6 @@ add-upstream() {
   name="$1"
   remote="$(git config --get remote.origin.url)"
   current="$(echo "$remote" | sed -e 's/.*github.com\://' -e 's/\/.*//')"
-  url="${remote/$current/$name}"
+  url="$(echo "$remote" | sed -e "s/$current/$name/")"
   git remote add upstream "$url"
 }
