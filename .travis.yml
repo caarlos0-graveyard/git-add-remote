@@ -1,5 +1,8 @@
 language: bash
 sudo: true
+os:
+  - linux
+  - osx
 install:
   - ./build/install.sh
 script:
