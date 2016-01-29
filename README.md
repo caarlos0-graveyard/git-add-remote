@@ -8,7 +8,7 @@ ZSH plugin to easily add the upstream remote to your git fork.
 Basically, it gets you origin remote and adds an upstream remote with
 the same URL, changing the user to what you pass as parameter:
 
-```sh
+```console
 $ git remote -v
 origin  git@github.com:caarlos0/random.git (fetch)
 origin  git@github.com:caarlos0/random.git (push)
@@ -26,20 +26,19 @@ upstream  git@github.com:random/random.git (push)
 
 ### Using antibody:
 
-```sh
+```console
 $ antibody bundle caarlos0/zsh-add-upstream
 ```
 
 ### Using antigen:
 
-```sh
+```console
 $ antigen bundle caarlos0/zsh-add-upstream
 ```
 
 ## As a git alias
 
-```sh
-$ git config --global alias.add-upstream '!zsh -ic add-upstream'
-$ git add-upstream organization
+```console
+$ git config --global alias.add-upstream '!zsh -ic \"add-upstream $*\"''
+$ git add-upstream org
 ```
-
