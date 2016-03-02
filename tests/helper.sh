@@ -8,5 +8,5 @@ fakerepo() {
 }
 
 mktempdir() {
-  mktemp -d -t 'add_remote'
+  mktemp -d 2>/dev/null || mktemp -d -t 'addremote'
 }
