@@ -1,44 +1,76 @@
-zsh-add-upstream [![Build Status](https://travis-ci.org/caarlos0/zsh-add-upstream.svg?branch=master)](https://travis-ci.org/caarlos0/zsh-open-pr)
-==================
+# git-add-remote [![Build Status](https://travis-ci.org/caarlos0/git-add-remote.svg?branch=master)](https://travis-ci.org/caarlos0/git-add-remote)
 
-ZSH plugin to easily add the upstream remote to your git fork.
+> A shell plugin to easily add remotes to git repositories.
 
-## How
+# Why
 
-Basically, it gets you origin remote and adds an upstream remote with
-the same URL, changing the user to what you pass as parameter:
+It is so damn boring to type or copy and paste the URLs changing only the
+fork name.
+
+# Usage
+
+Given that you are in a valid git managed folder, with a remote named `origin`,
+you can, for example, add your company's remote as upstream:
 
 ```console
+$ add-upstream company
+
 $ git remote -v
 origin  git@github.com:caarlos0/random.git (fetch)
 origin  git@github.com:caarlos0/random.git (push)
+upstream  git@github.com:company/random.git (fetch)
+upstream  git@github.com:company/random.git (push)
+```
 
-$ add-upstream random
+Or even add your coworker's remote to work in some branch together:
+
+```console
+$ add-remote my-coworker
 
 $ git remote -v
 origin  git@github.com:caarlos0/random.git (fetch)
 origin  git@github.com:caarlos0/random.git (push)
-upstream  git@github.com:random/random.git (fetch)
-upstream  git@github.com:random/random.git (push)
+my-coworker  git@github.com:my-coworker/random.git (fetch)
+my-coworker  git@github.com:my-coworker/random.git (push)
 ```
 
-## Installation
-
-### Using antibody:
+Some people have hard aliases in github, so you can even set the remote's name:
 
 ```console
-$ antibody bundle caarlos0/zsh-add-upstream
+$ add-remote _c0w0rk3r_0x12 newguy
+
+$ git remote -v
+origin  git@github.com:caarlos0/random.git (fetch)
+origin  git@github.com:caarlos0/random.git (push)
+newguy  git@github.com:_c0w0rk3r_0x12/random.git (fetch)
+newguy  git@github.com:_c0w0rk3r_0x12/random.git (push)
 ```
 
-### Using antigen:
+`newguy`'s tend to multiply, so I don't recommend naming it like that.
+
+# Installation
+
+It was innitialy made to be used in ZSH, so, if you use antibody, antigen, or
+whatever, just `bundle` it:
 
 ```console
-$ antigen bundle caarlos0/zsh-add-upstream
+$ antibody bundle caarlos0/git-add-remote
 ```
 
-## As a git alias
+If you use bash, you can clone this repo somewhere or just download the
+[add-remote.sh](/add-remote.sh) file and source the
+[add-remote.sh](/add-remote.sh) file in your `~/.profile` or wherever you like.
+
+
+# `git alias`ing
 
 ```console
 $ git config --global alias.add-upstream '!zsh -ic \"add-upstream $*\"''
+$ git config --global alias.add-remote '!zsh -ic \"add-remote $*\"''
 $ git add-upstream org
+$ git add-remote user remote_name
+$ git add-remote user
 ```
+
+> These examples are for zsh, but I'm pretty sure they also work on bash by
+replacing `zsh -ic` with `bash -ic`.
