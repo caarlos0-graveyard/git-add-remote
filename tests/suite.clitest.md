@@ -42,7 +42,7 @@ $
 # add-remote when folder is not git repository
 
 ```console
-$ cd "$(mktemp -d)"
+$ cd "$(mktempdir)"
 $ add-remote whatever
 A remote called 'origin' doesn't exist. Aborting.
 $
@@ -61,7 +61,7 @@ $
 # add-upstream when folder is not git repository
 
 ```console
-$ cd "$(mktemp -d)"
+$ cd "$(mktempdir)"
 $ add-upstream any
 A remote called 'origin' doesn't exist. Aborting.
 $
