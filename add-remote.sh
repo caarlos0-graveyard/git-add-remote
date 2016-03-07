@@ -1,5 +1,4 @@
 #!/bin/sh
-set -o pipefail
 # gets the url for the given fork
 __addremote_url() {
   # shellcheck disable=SC2039
