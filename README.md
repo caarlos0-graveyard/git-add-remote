@@ -28,10 +28,10 @@ Or even add your coworker's remote to work in some branch together:
 $ add-remote my-coworker
 
 $ git remote -v
-origin  git@github.com:caarlos0/random.git (fetch)
-origin  git@github.com:caarlos0/random.git (push)
-my-coworker  git@github.com:my-coworker/random.git (fetch)
-my-coworker  git@github.com:my-coworker/random.git (push)
+origin  https://github.com/caarlos0/random.git (fetch)
+origin  https://github.com/caarlos0/random.git (push)
+my-coworker  https://github.com/my-coworker/random.git (fetch)
+my-coworker  https://github.com/my-coworker/random.git (push)
 ```
 
 Some people have hard aliases in github, so you can even set the remote's name:
