@@ -9,7 +9,7 @@ __addremote_url() {
     return 1
   fi
   remote="$(git config --get remote.origin.url)"
-  current="$(echo "$remote" | sed -e 's/.*github.com\://' -e 's/\/.*//')"
+  current="$(echo "$remote" | sed -e 's/.*github\.com.//' -e 's/\/.*//')"
   echo "$remote" | sed -e "s/$current/$fork/"
 }
 
