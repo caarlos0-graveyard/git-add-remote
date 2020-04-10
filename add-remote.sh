@@ -8,7 +8,7 @@ __addremote_url() {
     echo "A remote called 'origin' doesn't exist. Aborting." >&2
     return 1
   fi
-  remote="$(git config --get remote.origin.url)"
+  remote="$(git ls-remote --get-url origin)"
   current="$(echo "$remote" | sed -e 's/.*github\.com.//' -e 's/\/.*//')"
   echo "$remote" | sed -e "s/$current/$fork/"
 }
