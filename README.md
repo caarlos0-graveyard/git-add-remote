@@ -61,6 +61,14 @@ If you use bash, you can clone this repo somewhere or just download the
 [add-remote.sh](/add-remote.sh) file and source the
 [add-remote.sh](/add-remote.sh) file in your `~/.profile` or wherever you like.
 
+## Fig
+
+[Fig](https://fig.io) adds apps, shortcuts, and autocomplete to your existing terminal.
+
+
+Install `git-add-remote` in just one click.
+
+<a href="https://fig.io/plugins/git-add-remote_caarlos0-graveyard" target="_blank"><img src="https://fig.io/badges/install-with-fig.svg" /></a>
 
 # `git alias`ing
 
